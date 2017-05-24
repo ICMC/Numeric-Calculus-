@@ -1,12 +1,19 @@
-function p = newtown(xi,yi,x)
+function [p,D] = newtown(xi,yi,x)
   
-  [m,n] = size(x);
+  [m,n] = size(x); % size retorna dois valore, numero de linhas = m, numero de colunas = n
   
   if(n==1) 
-    xi=xi';
-    yi =yi';
+    xi=xi'; % padronizando para xi ser uma linha caso o input seja uma coluna 
     n=m;
   end 
+  
+  [e,d] = size(y);
+  
+  if(d==1)
+    yi =yi'; %padronizando para yi ser uma linha caso o input seja uma coluna 
+    d=e;
+  end 
+  
   n = length(xi); % number of points or number or 'x'
   ni =length(x); % length 1
   
@@ -26,5 +33,4 @@ function p = newtown(xi,yi,x)
       N(i,:) = N(i,:).*(x - xi(k));
     end  
   end
-   p = D(:,:);
-  %p = D(1,:)*N;  % multiplica a primeira linha pelo vetor N
+  p = D(1,:)*N;  % multiplica a primeira linha pelo vetor N
