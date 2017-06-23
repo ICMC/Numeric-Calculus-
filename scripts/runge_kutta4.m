@@ -1,8 +1,8 @@
-function [x,y] = runge_kutta4(x0, y0, h, func, n)
-  x = zeros(1, n);
-  y = x; 
+function [x,y] = runge_kutta4(y0, func, n, xn)
+  x = linspace(x0,xn,n)  ;
+  y = zeros(1, n); 
   
-  x(1) = x0;
+
   y(1) = y0;
   
   for i = 1:n-1

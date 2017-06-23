@@ -7,5 +7,5 @@ function [x,y] = euler(x0, y0, func, h, n)
   
   for i = 1:n-1 
      y(i+1) = y(i)+ h*func(x(i), y(i));
-     
+     x(i+1) = x(i) + h;
   end 
