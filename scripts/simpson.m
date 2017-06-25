@@ -1,4 +1,4 @@
-function x = simpson(func, h, pontos) 
+function x = simpson(func, h, pontos)  % 1/6 de simpson
   x= 0;
   n = size(pontos,2);
   
@@ -6,4 +6,4 @@ function x = simpson(func, h, pontos)
     x = x + (func(pontos(i)) + 4*func(pontos(i+1)) + func(pontos(i+2)));
   end
   
-  x = h*x;
+  x = (h/6)*x;
