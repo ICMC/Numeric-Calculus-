@@ -9,6 +9,6 @@
      x = linspace(0,int(2),n+1);
      
      for i = 1:n
-       y(:,i+1) = y(:,i) + h*func(x(i),y(:,i));
+       y(:,i+1) = y(:,i) + (h*func(x(i),y(:,i)))';
      end 
      

@@ -8,3 +8,5 @@ function x = trapezio(func, pontos, h)
   end 
   
   x = x +  h*y;
+
+  y = y + sum(func(2:1:end-1))
